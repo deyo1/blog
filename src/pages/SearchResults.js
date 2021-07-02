@@ -6,7 +6,7 @@ const SerachResultsPage = () => {
     const { query } = useParams();
     
     return (
-        <PostList author={`author=${query}&`} text={'Nothing found.'} />
+        <PostList authorId={''} author={query} text={'Nothing found.'} />
     );
    
 }

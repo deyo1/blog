@@ -16,8 +16,15 @@ function PostList(props) {
     const [error, setError] = useState(false);
 
     useEffect(() => {
+        let url = `http://localhost:8000/posts?&_sort=id&_order=desc`;
+        if (props.author !== '') {
+            url = `http://localhost:8000/posts?author=${props.author}&_sort=id&_order=desc`;
+        }
+        else if (props.authorId !== '') {
+            url = `http://localhost:8000/posts?authorId=${props.authorId}&_sort=id&_order=desc`;
+        }
         setIsLoading(true);
-        axios.get(`http://localhost:8000/posts?${props.author}_sort=id&_order=desc`, {
+        axios.get(url, {
             params: {
                 _page: activePage,
                 _limit: 10
@@ -30,7 +37,7 @@ function PostList(props) {
             console.log(err);
             setError(true);
         });
-    }, [activePage, props.author]);
+    }, [activePage, props.author, props.authorId]);
 
         if(error) {
             return(

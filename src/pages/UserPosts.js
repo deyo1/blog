@@ -8,7 +8,7 @@ const UserPostsPage = () => {
 
     return (
         <>
-        <PostList author={`authorId=${authCtx.profile.userName}&`} text={"You don't have any posts."} />
+        <PostList author={''} authorId={authCtx.profile.userName} text={"You don't have any posts."} />
         </>
     );
 

@@ -3,7 +3,7 @@ import PostList from "../components/PostList";
 const HomePage = () => {
 
     return(
-        <PostList author={''} text={''} />
+        <PostList author={''} text={''} authorId={''} />
     );
 }
 

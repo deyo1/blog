@@ -47,7 +47,7 @@ const Header = () => {
             <Nav className="justify-content-end" style={{ width: "100%", margin: "10px" }}>
                 {authCtx.isLogedIn && (
                     <>
-                    <NavDropdown title="Post" id="post">
+                    <NavDropdown title="Menu" id="post">
                     <NavDropdown.Item as={Link} to="/your-posts">Your posts</NavDropdown.Item>
                     <NavDropdown.Item as={Link} to="/add-post">Add new post</NavDropdown.Item>
                     <NavDropdown.Item onClick={handleEditPost}>Edit post</NavDropdown.Item>
